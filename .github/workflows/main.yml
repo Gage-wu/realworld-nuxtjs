@@ -9,11 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    # 下载源码
+    # 下载   源码
     - name: Checkout
       uses: actions/checkout@master
 
-    # 打包构建
+    # 打包    构建
     - name: Build
       uses: actions/setup-node@master
     - run: npm install
