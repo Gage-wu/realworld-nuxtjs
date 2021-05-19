@@ -20,7 +20,7 @@ jobs:
     - run: npm run build
     - run: tar -zcvf release.tgz .nuxt static nuxt.config.js package.json package-lock.json pm2.config.json
 
-    # 发布Release
+    # 发布 Release
     - name: Create Release
       id: create_release
       uses: actions/create-release@master
@@ -32,7 +32,7 @@ jobs:
         draft: false
         prerelease: false
 
-    # 上传 构建结果到 Release
+    # 上传 构建 结果到 Release
     - name: Upload Release Asset
       id: upload-release-asset
       uses: actions/upload-release-asset@master
@@ -44,7 +44,7 @@ jobs:
         asset_name: release.tgz
         asset_content_type: application/x-tgz
 
-    # 部署到服务器
+    # 部署 到 服 务器
     - name: Deploy
       uses: appleboy/ssh-action@master
       with:
