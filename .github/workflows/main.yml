@@ -13,7 +13,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
 
-    # 打包    构建
+    # 打包构建
     - name: Build
       uses: actions/setup-node@master
     - run: npm install
@@ -54,7 +54,7 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           cd /root/realworld-nuxtjs
-          wget https://github.com/gage_wu/realworld-nuxtjs/releases/latest/download/release.tgz -O release.tgz
+          wget https://github.com/Gage-wu/realworld-nuxtjs/releases/latest/download/release.tgz -O release.tgz
           tar zxvf release.tgz
           npm install --production
           pm2 reload pm2.config.json
